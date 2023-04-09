@@ -6,6 +6,7 @@ const app = express();
 // middleware: function to modify the incoming request data
 app.use(express.json());
 
+// read the tours data from the file and parse it into a JavaScript object
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
